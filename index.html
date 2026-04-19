@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diamond Bank • UDP Bank</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Diamond Bank</h1>
+      <h2>UDP Bank</h2>
+      <p class="subtitle">Your Dual‑Currency Banking Dashboard</p>
+    </header>
+
+    <!-- BALANCES -->
+    <section class="balances-section">
+      <div class="balance-card usd-card">
+        <h3>Diamond Bank (USD)</h3>
+        <div id="usdBalance" class="balance-amount">$0</div>
+      </div>
+
+      <div class="balance-card ngn-card">
+        <h3>UDP Bank (NGN)</h3>
+        <div id="ngnBalance" class="balance-amount">₦0</div>
+      </div>
+    </section>
+
+    <!-- ACTIONS -->
+    <section class="actions-section">
+
+      <div class="card">
+        <h3>Bank Actions</h3>
+
+        <label>Amount</label>
+        <input type="number" id="amountInput" placeholder="Enter amount" />
+
+        <label>FX Rate (₦ per $1)</label>
+        <input type="number" id="fxRate" value="1500" />
+
+        <div class="btn-row">
+          <button id="addUSD" class="btn purple">Add USD</button>
+          <button id="addNGN" class="btn purple">Add NGN</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="withdrawUSD" class="btn red">Withdraw USD</button>
+          <button id="withdrawNGN" class="btn red">Withdraw NGN</button>
+        </div>
+
+        <div class="btn-row">
+          <button id="usdToNgn" class="btn green">USD → NGN</button>
+          <button id="ngnToUsd" class="btn green">NGN → USD</button>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- TRANSACTIONS -->
+    <section class="transactions-section">
+      <h3>Transaction History</h3>
+      <div id="transactionsList" class="transactions-list"></div>
+    </section>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
